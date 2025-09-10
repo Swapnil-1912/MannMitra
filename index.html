@@ -1,0 +1,331 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   MannMitra
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+   /* Unique eye-catching logo styles */
+   .logo-wrapper {
+     position: relative;
+     width: 56px;
+     height: 56px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: linear-gradient(135deg, #4F46E5, #6366F1);
+     border-radius: 50%;
+     box-shadow: 0 0 15px rgba(99, 102, 241, 0.7);
+     transition: transform 0.4s ease, box-shadow 0.4s ease;
+   }
+   .logo-wrapper:hover {
+     transform: rotate(20deg) scale(1.15);
+     box-shadow: 0 0 25px rgba(99, 102, 241, 0.9);
+   }
+   .logo-inner-circle {
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     background: white;
+     border-radius: 50%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     box-shadow: inset 0 0 8px #4F46E5;
+   }
+   .logo-text {
+     position: relative;
+     font-weight: 900;
+     font-size: 1.25rem;
+     color: #4F46E5;
+     user-select: none;
+     z-index: 10;
+     font-family: 'Inter', sans-serif;
+     letter-spacing: 0.05em;
+     text-shadow: 0 0 5px rgba(79, 70, 229, 0.7);
+   }
+   .logo-wrapper:before,
+   .logo-wrapper:after {
+     content: "";
+     position: absolute;
+     border-radius: 50%;
+     opacity: 0.6;
+     animation: pulse 3s infinite ease-in-out;
+   }
+   .logo-wrapper:before {
+     width: 70px;
+     height: 70px;
+     background: #6366F1;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     animation-delay: 0s;
+     z-index: 0;
+   }
+   .logo-wrapper:after {
+     width: 90px;
+     height: 90px;
+     background: #4F46E5;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     animation-delay: 1.5s;
+     z-index: 0;
+   }
+   @keyframes pulse {
+     0%, 100% {
+       transform: translate(-50%, -50%) scale(1);
+       opacity: 0.6;
+     }
+     50% {
+       transform: translate(-50%, -50%) scale(1.3);
+       opacity: 0;
+     }
+   }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+   <div class="flex items-center space-x-3">
+    <div class="logo-wrapper select-none" title="MannMitra Logo">
+     <div class="logo-inner-circle"></div>
+     <span class="logo-text">
+      MM
+     </span>
+    </div>
+    <span class="font-semibold text-xl text-[#4F46E5] select-none">
+     MannMitra
+    </span>
+   </div>
+   <nav class="flex items-center space-x-6 text-gray-700 text-sm font-medium">
+    <a class="hover:text-[#4F46E5]" href="#">
+     Home
+    </a>
+    <a class="hover:text-[#4F46E5]" href="#">
+     Services
+    </a>
+    <a class="hover:text-[#4F46E5]" href="#">
+     Resources
+    </a>
+    <a class="hover:text-[#4F46E5]" href="#">
+     Contact
+    </a>
+   </nav>
+   <div class="flex items-center space-x-4">
+    <button class="text-[#4F46E5] font-semibold text-sm hover:underline focus:outline-none" type="button">
+     Login
+    </button>
+    <button class="bg-[#4F46E5] text-white font-semibold text-sm rounded px-4 py-2 hover:bg-[#4338ca] focus:outline-none transition" type="button">
+     Sign Up
+    </button>
+   </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="bg-[#4F46E5] px-6 py-10 md:py-16 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8">
+   <div class="max-w-lg text-white">
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
+     MannMitra: Your Digital Mental Health Companion
+    </h1>
+    <p class="text-base md:text-lg font-normal mb-6 max-w-md">
+     A trusted platform dedicated to providing psychological support, resources, and community for students in higher education.
+    </p>
+    <button class="bg-white text-[#4F46E5] font-semibold text-sm md:text-base rounded px-5 py-2.5 hover:bg-gray-100 transition" type="button">
+     Explore Our Services
+    </button>
+   </div>
+   <div class="w-full max-w-sm md:max-w-md">
+    <img alt="Colorful illustration of three people smiling and looking at a smartphone together with vibrant colors and diverse background" class="w-full h-auto rounded" height="300" src="https://storage.googleapis.com/a1aa/image/dd4092dd-b269-479f-c59c-c63ab3659e6a.jpg" width="400"/>
+   </div>
+  </section>
+  <!-- MannMitra Services -->
+  <section class="px-6 md:px-16 py-10 md:py-16 max-w-7xl mx-auto">
+   <h2 class="text-center text-[#4F46E5] font-semibold text-lg mb-10 select-none">
+    MannMitra Services
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-6 gap-6">
+    <div class="bg-gradient-to-tr from-purple-400 via-pink-500 to-red-500 rounded-lg p-6 text-center text-white shadow-lg col-span-2">
+     <h3 class="font-semibold mb-2 text-sm sm:text-base">
+      24/7 Chat Support
+     </h3>
+     <p class="text-xs sm:text-sm">
+      Connect instantly with trained MannMitra counselors anytime you need someone to talk to.
+     </p>
+    </div>
+    <div class="bg-gradient-to-tr from-green-400 via-blue-500 to-indigo-600 rounded-lg p-6 text-center text-white shadow-lg col-span-2">
+     <h3 class="font-semibold mb-2 text-sm sm:text-base">
+      Self-Help Resources
+     </h3>
+     <p class="text-xs sm:text-sm">
+      Access articles, videos, and exercises created by MannMitra to help manage stress, anxiety, and depression.
+     </p>
+    </div>
+    <div class="bg-gradient-to-tr from-yellow-400 via-orange-500 to-red-600 rounded-lg p-6 text-center text-white shadow-lg col-span-2">
+     <h3 class="font-semibold mb-2 text-sm sm:text-base">
+      Peer Support Groups
+     </h3>
+     <p class="text-xs sm:text-sm">
+      Join moderated MannMitra groups to share experiences and build a supportive community.
+     </p>
+    </div>
+   </div>
+   <!-- New Features Row -->
+   <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+    <div class="bg-gradient-to-tr from-purple-400 via-pink-500 to-red-500 rounded-lg p-6 text-center text-white shadow-lg">
+     <h3 class="font-semibold mb-2 text-base">
+      <i class="fas fa-robot mr-2">
+      </i>
+      Chat with AI
+     </h3>
+     <p class="text-sm">
+      Get instant AI-powered mental health support and guidance anytime you need.
+     </p>
+    </div>
+    <div class="bg-gradient-to-tr from-green-400 via-blue-500 to-indigo-600 rounded-lg p-6 text-center text-white shadow-lg">
+     <h3 class="font-semibold mb-2 text-base">
+      <i class="fas fa-seedling mr-2">
+      </i>
+      Improve Yourself
+     </h3>
+     <p class="text-sm">
+      Access personalized self-improvement plans and track your mental wellness journey.
+     </p>
+    </div>
+    <div class="bg-gradient-to-tr from-yellow-400 via-orange-500 to-red-600 rounded-lg p-6 text-center text-white shadow-lg">
+     <h3 class="font-semibold mb-2 text-base">
+      <i class="fas fa-user-md mr-2">
+      </i>
+      Consult Counselor
+     </h3>
+     <p class="text-sm">
+      Schedule confidential sessions with professional counselors for personalized help.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- MannMitra Key Features -->
+  <section class="px-6 md:px-16 max-w-7xl mx-auto pb-10 md:pb-16">
+   <h2 class="text-center text-[#4F46E5] font-semibold text-lg mb-10 select-none">
+    MannMitra Key Features
+   </h2>
+   <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12">
+    <div class="md:w-1/2 flex justify-center">
+     <img alt="Hand holding a smartphone showing a chat app screen with messages, colorful and vibrant UI" class="rounded shadow-md max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/4f8b6014-0fec-4f6d-0967-605e02827a68.jpg" width="300"/>
+    </div>
+    <div class="md:w-1/2">
+     <h3 class="text-[#1E40AF] font-semibold text-sm md:text-base mb-2 select-none">
+      Confidential Chat &amp; Video Counseling
+     </h3>
+     <p class="text-xs md:text-sm text-gray-700">
+      Secure and private communication channels to ensure students feel safe sharing their concerns with confidential counselors.
+     </p>
+    </div>
+   </div>
+   <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12 md:flex-row-reverse">
+    <div class="md:w-1/2 flex justify-center">
+     <img alt="Tablet device displaying a personalized dashboard with mood tracking graphs and charts in bright colors" class="rounded shadow-md max-w-full h-auto" height="250" src="https://storage.googleapis.com/a1aa/image/2f3e452b-f256-4910-bff6-eaa0b370a14b.jpg" width="400"/>
+    </div>
+    <div class="md:w-1/2">
+     <h3 class="text-[#1E40AF] font-semibold text-sm md:text-base mb-2 select-none">
+      Personalized Dashboard &amp; Mood Tracking
+     </h3>
+     <p class="text-xs md:text-sm text-gray-700">
+      Track your mood and goals, and monitor your mental health progress over time with MannMitra’s intuitive tools.
+     </p>
+    </div>
+   </div>
+   <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+    <div class="md:w-1/2 flex justify-center">
+     <img alt="Laptop screen displaying resource library and live workshop interface with colorful UI" class="rounded shadow-md max-w-full h-auto" height="250" src="https://storage.googleapis.com/a1aa/image/4638e5ba-6c33-43c3-b7d8-b3594a7fa525.jpg" width="400"/>
+    </div>
+    <div class="md:w-1/2">
+     <h3 class="text-[#1E40AF] font-semibold text-sm md:text-base mb-2 select-none">
+      Resource Library &amp; Workshops
+     </h3>
+     <p class="text-xs md:text-sm text-gray-700">
+      Access curated content and participate in live workshops to enhance your mental well-being through MannMitra.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="bg-white px-6 md:px-16 max-w-7xl mx-auto py-10 md:py-16">
+   <h2 class="text-center text-[#4F46E5] font-semibold text-lg mb-10 select-none">
+    What Students Say About MannMitra
+   </h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="border border-gray-200 rounded-lg p-6 text-center">
+     <p class="text-xs text-gray-700 mb-4 italic">
+      “MannMitra helped me feel supported when I felt overwhelmed. The counselors are amazing!”
+     </p>
+     <p class="text-sm font-semibold text-[#4F46E5] select-none">
+      Emily R.
+     </p>
+     <p class="text-xs text-gray-500">
+      Student at California
+     </p>
+    </div>
+    <div class="border border-gray-200 rounded-lg p-6 text-center">
+     <p class="text-xs text-gray-700 mb-4 italic">
+      “The mood tracking feature helped me understand my emotions better and take action.”
+     </p>
+     <p class="text-sm font-semibold text-[#4F46E5] select-none">
+      Samuel E.
+     </p>
+     <p class="text-xs text-gray-500">
+      New York University
+     </p>
+    </div>
+    <div class="border border-gray-200 rounded-lg p-6 text-center">
+     <p class="text-xs text-gray-700 mb-4 italic">
+      “Joining MannMitra peer support groups made me feel safe and more empowered.”
+     </p>
+     <p class="text-sm font-semibold text-[#4F46E5] select-none">
+      Sofia M.
+     </p>
+     <p class="text-xs text-gray-500">
+      London School of Economics
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Form -->
+  <section class="px-6 md:px-16 max-w-md mx-auto pb-16">
+   <h2 class="text-[#4F46E5] font-semibold text-lg mb-6 text-center select-none">
+    Contact MannMitra
+   </h2>
+   <form class="space-y-4">
+    <div>
+     <label class="block text-xs font-medium text-gray-700 mb-1 select-none" for="fullname">
+      Full Name
+     </label>
+     <input class="w-full border border-gray-300 rounded px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#4F46E5]" id="fullname" name="fullname" placeholder="Your full name" type="text"/>
+    </div>
+    <div>
+     <label class="block text-xs font-medium text-gray-700 mb-1 select-none" for="email">
+      Email Address
+     </label>
+     <input class="w-full border border-gray-300 rounded px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#4F46E5]" id="email" name="email" placeholder="you@example.com" type="email"/>
+    </div>
+    <div>
+     <label class="block text-xs font-medium text-gray-700 mb-1 select-none" for="message">
+      Message
+     </label>
+     <textarea class="w-full border border-gray-300 rounded px-3 py-2 text-xs resize-none focus:outline-none focus:ring-2 focus:ring-[#4F46E5]" id="message" name="message" placeholder="Write your message here..." rows="4"></textarea>
+    </div>
+    <button class="w-full bg-[#4F46E5] text-white font-semibold text-sm py-2 rounded hover:bg-[#4338ca] transition" type="submit">
+     Send Message
+    </button>
+   </form>
+  </section>
+ </body>
+</html>
